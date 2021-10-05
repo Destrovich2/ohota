@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/templates/aspro_max/components/bitrix/news.detail/news/style.css" => "162970272232778","/bitrix/templates/aspro_max/css/jquery.fancybox.min.css" => "162970272212936","/bitrix/templates/aspro_max/css/animation/animate.min.css" => "162970272252789","/bitrix/templates/aspro_max/css/animation/animation_ext.css" => "16297027224934",]; ?>

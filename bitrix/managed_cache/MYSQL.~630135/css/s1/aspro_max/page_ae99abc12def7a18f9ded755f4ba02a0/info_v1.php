@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/templates/aspro_max/components/bitrix/sale.basket.basket/v1/style.css" => "162970272244754","/bitrix/templates/aspro_max/vendor/css/carousel/owl/owl.carousel.min.css" => "16297027223351","/bitrix/templates/aspro_max/vendor/css/carousel/owl/owl.theme.default.min.css" => "16297027221013",]; ?>

@@ -1,0 +1,269 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?$this->setFrameMode(true);?>
+<?use \Bitrix\Main\Localization\Loc,
+	  \Bitrix\Main\Web\Json;?>
+
+<style type="text/css">
+.slick-initialized .slick-slide {
+    display: block;
+    /*height: 556px;*/
+}
+.slick-track {
+    display: flex;
+    height: 556px;
+}
+.carousel-2__item {
+    padding: 24px;
+    padding-bottom: 30px;
+    -webkit-transition: all 320ms;
+    transition: all 320ms;
+    background-color: #fff;
+    position: relative;
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    display: none;
+}	
+.carousel-2__item:hover {
+    -webkit-box-shadow: 0px 8px 30px 8px rgb(0 0 0 / 13%);
+    box-shadow: 0px 8px 30px 8px rgb(0 0 0 / 13%);
+    z-index: 3;
+}
+.carousel-2__available {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 8px;
+    font-family: "EXO 2", sans-serif;
+}
+.carousel-2__available-ico {
+    width: 10px;
+    margin-right: 8px;
+}
+.carousel-2__available-ico svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.carousel-2__available-text {
+    font-size: 10px;
+    color: #78a962;
+    font-family: "EXO 2", sans-serif;
+}
+.carousel-2__item:hover .carousel-2__specs {
+    opacity: 1;
+}
+.carousel-2__specs {
+    -webkit-transition: all 320ms;
+    transition: all 320ms;
+    opacity: 0;
+}
+.carousel-2__specs-item {
+    font-size: 10px;
+    color: #1c1c1c;
+    margin-bottom: 4px;
+}
+.carousel-2__specs-item strong {
+    font-weight: bold;
+}
+.carousel-2__img {
+    display: block;
+    height: auto;
+}
+.carousel-2__img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.slick-slide img {
+    display: block;
+}
+.carousel-2__title {
+    font-size: 13px;
+    color: #000;
+    margin-bottom: 30px;
+}
+.carousel-2__prices-n-colors {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-top: 24px;
+}
+.carousel-2__item:hover .carousel-2__colors {
+    opacity: 1;
+}
+.carousel-2__colors {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 4px;
+    -webkit-transition: all 320ms;
+    transition: all 320ms;
+    opacity: 0;
+}
+.carousel-2__prices-old {
+    font-size: 18px;
+    line-height: 24px;
+    color: #666666;
+    font-family: "EXO 2", sans-serif;
+    text-decoration: line-through;
+}
+.carousel-2__prices-current {
+    font-size: 24px;
+    line-height: 30px;
+    color: #000;
+    font-weight: bold;
+    font-family: "EXO 2", sans-serif;
+}
+.carousel-2__colors-item {
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+}
+.carousel-2__colors-item + .carousel-2__colors-item {
+    margin-left: 6px;
+}
+.carousel-2__item:hover .carousel-2__footer {
+    opacity: 1;
+}
+.carousel-2__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all 320ms;
+    transition: all 320ms;
+    opacity: 0;
+    margin-top: 30px;
+}
+.carousel-2__footer-more {
+    margin-right: auto;
+    width: 130px;
+    height: 37px;
+    font-size: 18px;
+}
+.btn-1 {
+    background-color: #008E1F;
+    color: #fff;
+    border-radius: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 320ms;
+    transition: all 320ms;
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+}
+.carousel-2__footer-compare {
+    display: block;
+    width: 20px;
+}
+.carousel-2__footer-compare svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.carousel-2__footer-fav {
+    display: block;
+    width: 20px;
+    margin-left: 10px;
+}
+.carousel-2__footer-fav svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+</style>
+
+
+
+                  	<?foreach($arResult["ITEMS"] as $arItem):?>
+
+                  		<? //echo '<pre>' ?>
+                  		<? //print_r($arItem); ?>
+                  		<? //echo '</pre>' ?>
+
+						<? //Начало блока с карточкой ?>
+						<div class="carousel-2__item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" data-id="<?=$arItem["ID"]?>" data-product_type="<?=$arItem["CATALOG_TYPE"]?>">
+							
+
+
+							<?ob_start();?>
+							<div class="carousel-2__available">
+			                <div class="carousel-2__available-ico">
+			                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+			                    <ellipse cx="5.91151" cy="5" rx="4.98476" ry="5" fill="#78A962"></ellipse>
+			                    <path d="M7.90527 3L5.39698 6L3.91747 4.27853" stroke="white" stroke-linecap="round"></path>
+			                  </svg>
+			                </div>
+
+			                <div class="carousel-2__available-text" data-fields='<?=Json::encode($arParams["FIELDS"])?>' data-stores='<?=Json::encode($arParams["STORES"])?>' data-user-fields='<?=Json::encode($arParams["USER_FIELDS"])?>'><strong>
+			                	<?=$arQuantityData["HTML"];?>
+								<?if(isset($arQuantityDataCMP) && $arQuantityDataCMP && $arItem['OFFERS']):?>
+									<?=$arQuantityDataCMP["HTML"];?>
+								<?endif;?>	
+			                </strong></div>
+
+			              </div>
+
+			              	
+						  <div class="carousel-2__specs">
+			                <div class="carousel-2__specs-item"><strong>Диаметр колеса:</strong> 18.5 дюймов</div>
+			                <div class="carousel-2__specs-item"><strong>Материал рамы:</strong> аллюминий</div>
+			              </div>
+			              	<? $UrlDetPicCart = CFile::GetPath($arItem['DETAIL_PICTURE']['ID']) ?>
+			            	<a href="#" class="carousel-2__img" tabindex="0"><img src="<?=$UrlDetPicCart?>"></a>
+							<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="carousel-2__title" tabindex="0"><?=$arItem["NAME"]?></a>
+			              <div class="carousel-2__prices-n-colors">
+			                <div class="carousel-2__prices">
+			                  <div class="carousel-2__prices-old">Р12499.00</div>
+			                  <div class="carousel-2__prices-current">Р9980.00</div>
+			                </div>
+			                <div class="carousel-2__colors">
+			                  <a href="#" class="carousel-2__colors-item" style="background-color: #ffd704" tabindex="0"></a>
+			                  <a href="#" class="carousel-2__colors-item" style="background-color: #ff0000" tabindex="0"></a>
+			                  <a href="#" class="carousel-2__colors-item" style="background-color: #2d2d2d" tabindex="0"></a>
+			                </div>
+			              </div>
+			              <div class="carousel-2__footer">
+			                <a href="#" class="carousel-2__footer-more btn-1" tabindex="0">Купить</a>
+			                <a href="#" class="carousel-2__footer-compare" tabindex="0">
+			                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			                    <path d="M6.80277 3.37222C7.74959 3.37222 8.60724 3.75645 9.22814 4.37736L7.4889 6.11664H11.6055V2L10.199 3.40651C9.33109 2.5386 8.13038 2 6.80277 2C4.38424 2 2.38767 3.79074 2.05493 6.11664H3.44086C3.7599 4.55232 5.14241 3.37222 6.80277 3.37222Z" fill="#9D9D9D"></path>
+			                    <path d="M10.6724 9.6402C11.1286 9.01926 11.4374 8.28515 11.5506 7.48926H10.1647C9.84564 9.05358 8.46312 10.2337 6.80273 10.2337C5.85591 10.2337 4.99826 9.84944 4.37736 9.22854L6.11664 7.48926H2V11.6059L3.40651 10.1994C4.27444 11.0673 5.47512 11.6059 6.80273 11.6059C7.86621 11.6059 8.84732 11.256 9.64321 10.6694L12.9777 14.0004L14 12.9781L10.6724 9.6402Z" fill="#9D9D9D"></path>
+			                  </svg>
+			                </a>
+			                <a href="#" class="carousel-2__footer-fav" tabindex="0">
+			                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			                    <path d="M3.09003 11.24C2.69003 11.24 2.31003 11.06 2.04003 10.76C1.78003 10.45 1.67003 10.05 1.73003 9.65L2.13003 7.29L0.420029 5.61C0.230029 5.43 0.0900293 5.19 0.0300293 4.93C-0.0199707 4.69 -0.0099707 4.44 0.0600293 4.2C0.140029 3.97 0.270029 3.76 0.460029 3.59C0.660029 3.41 0.900029 3.3 1.17003 3.26L3.54003 2.91L4.59003 0.76C4.71003 0.52 4.89003 0.32 5.12003 0.19C5.33003 0.07 5.57003 0 5.82003 0C6.07003 0 6.31003 0.06 6.52003 0.19C6.75003 0.33 6.93003 0.52 7.05003 0.76L8.12003 2.9L10.49 3.24C10.75 3.28 11 3.39 11.2 3.56C11.39 3.72 11.52 3.93 11.6 4.16C11.68 4.4 11.69 4.65 11.64 4.89C11.58 5.15 11.45 5.38 11.26 5.57L9.55003 7.25L9.96003 9.61C10.03 10.01 9.92003 10.42 9.66003 10.73C9.40003 11.04 9.02003 11.22 8.61003 11.22C8.39003 11.22 8.17003 11.17 7.97003 11.07L5.85003 9.96L3.73003 11.08C3.54003 11.18 3.32003 11.24 3.09003 11.24ZM4.60003 3.91C4.52003 4.08 4.35003 4.2 4.16003 4.23L1.37003 4.65L3.41003 6.58C3.55003 6.71 3.61003 6.91 3.58003 7.1L3.11003 9.87L5.57003 8.53C5.66003 8.49 5.75003 8.46 5.84003 8.46C5.93003 8.46 6.03003 8.48 6.11003 8.53L8.61003 9.83L8.10003 7.07C8.07003 6.89 8.14003 6.69 8.27003 6.56L10.28 4.58L7.50003 4.22C7.31003 4.19 7.15003 4.07 7.06003 3.9L5.82003 1.41L4.60003 3.91Z" fill="#FCB500"></path>
+			                  </svg>
+			                </a>
+			              </div>
+			            </div>
+
+				
+			<? endforeach; ?>
+
+
+
