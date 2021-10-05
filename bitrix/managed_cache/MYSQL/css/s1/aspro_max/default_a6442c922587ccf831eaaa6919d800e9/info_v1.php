@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/templates/aspro_max/components/bitrix/catalog.section/catalog_block/style.css" => "16297027222295",]; ?>
