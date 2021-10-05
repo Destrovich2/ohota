@@ -1,1 +1,0 @@
-<a href="<?=SITE_DIR?>include/licenses_detail.php">Политика конфиденциальности</a>

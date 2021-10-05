@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/bitrix/templates/aspro_max/components/bitrix/sale.personal.section/main/style.css" => "16297027221724","/bitrix/components/bitrix/sale.personal.order.list/templates/.default/style.css" => "162970207513228","/bitrix/components/bitrix/sale.order.payment.change/templates/.default/style.css" => "16297020755814",]; ?>

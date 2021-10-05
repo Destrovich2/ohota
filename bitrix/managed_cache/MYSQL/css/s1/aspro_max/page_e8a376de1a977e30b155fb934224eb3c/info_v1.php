@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/bitrix/templates/aspro_max/components/bitrix/system.auth.changepasswd/main/style.css" => "1629702722446",]; ?>

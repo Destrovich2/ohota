@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/bitrix/templates/aspro_max/components/bitrix/news/reviews/style.css" => "1629702722338","/bitrix/templates/aspro_max/components/bitrix/news.list/front_review/style.css" => "16297027227876",]; ?>

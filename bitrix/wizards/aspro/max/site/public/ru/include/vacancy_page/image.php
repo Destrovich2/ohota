@@ -1,1 +1,0 @@
-<img class="img-responsive" src="<?=SITE_DIR;?>include/vacancy_page/vacancy_image.jpg" alt="Вакансии">

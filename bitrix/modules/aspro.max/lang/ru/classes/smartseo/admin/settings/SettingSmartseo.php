@@ -1,2 +1,0 @@
-<?
-$MESS['SMARTSEO_FILTER_RULE_NAME_TEMPLATE'] = 'Для разделов';

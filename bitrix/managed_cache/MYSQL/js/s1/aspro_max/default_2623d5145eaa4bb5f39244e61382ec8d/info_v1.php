@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/bitrix/templates/aspro_max/components/bitrix/catalog.smart.filter/main_ajax/script.js" => "162970272228164",]; ?>

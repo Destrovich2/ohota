@@ -1,1 +1,0 @@
-Я согласен на <a href="#SITE_DIR#include/licenses_detail.php" target="_blank">обработку персональных данных</a>

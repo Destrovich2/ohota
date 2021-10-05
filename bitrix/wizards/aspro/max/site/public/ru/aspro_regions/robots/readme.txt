@@ -1,1 +1,0 @@
-This folder contain seo file robots.txt

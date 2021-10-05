@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/bitrix/components/bitrix/map.yandex.system/templates/.default/style.css" => "1629702068666","/bitrix/templates/aspro_max/components/bitrix/map.yandex.system/map/style.css" => "1629702722598","/bitrix/templates/aspro_max/css/jquery.fancybox.min.css" => "162970272212936",]; ?>

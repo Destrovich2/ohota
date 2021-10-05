@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/bitrix/templates/aspro_max/vendor/fonts/font-awesome/css/font-awesome.min.css" => "162970272231000",]; ?>

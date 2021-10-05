@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/bitrix/templates/aspro_max/js/jquery.fancybox.min.js" => "162970272267390",]; ?>

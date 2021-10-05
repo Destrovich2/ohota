@@ -1,1 +1,0 @@
-Нажимая «Выслать код», вы даете согласие на <a href="/include/licenses_detail.php" target="_blank">обработку персональных данных</a>
