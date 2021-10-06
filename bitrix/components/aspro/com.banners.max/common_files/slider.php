@@ -3,15 +3,6 @@ $bHideOnNarrow = $arTheme['BIGBANNER_HIDEONNARROW']['VALUE'] === 'Y';?>
 
 
 <style type="text/css">
-.hhshghsi{
-	background-color: #111111;
-	padding: 75px 0 15px 0;
-}
-@media (max-width: 1259px){
-	.hhshghsi{
-	background-color: #111111;
-	padding: 0;
-}
 .top_slider_wrapp .main-slider, .top_slider_wrapp .main-slider__item, .top_slider_wrapp .main-slider__item td, .top_slider_wrapp .main-slider__item tr {
     height: 60vh;
 }
@@ -55,7 +46,7 @@ $bHideOnNarrow = $arTheme['BIGBANNER_HIDEONNARROW']['VALUE'] === 'Y';?>
 }
 </style>
 
-<div class="top_slider_wrapp hhshghsi maxwidth-banner view_<?=$arResult['BIGBANNER_MOBILE']?><?=($bHideOnNarrow ? ' hidden_narrow' : '')?>"
+<div class="top_slider_wrapp banner_cover maxwidth-banner view_<?=$arResult['BIGBANNER_MOBILE']?><?=($bHideOnNarrow ? ' hidden_narrow' : '')?>"
 	style="">
 	<?
 	$arOptions = [

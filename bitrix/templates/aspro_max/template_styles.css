@@ -22413,6 +22413,9 @@ a:hover {
   color: #fff;
   line-height: 1.5;
 }
+.banner_cover {
+  background-color: #111111;
+}
 @media screen and (min-width: 320px) {
   .header__search {
     width: 100%;
@@ -22446,6 +22449,9 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .banner_cover {
+    padding-top: 70px;
   }
 }
 @media screen and (min-width: 768px) {
