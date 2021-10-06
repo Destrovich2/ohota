@@ -21388,14 +21388,6 @@ table.contacts-stores tr.item td:last-of-type {
   transform: translateX(-10px);
   visibility: hidden;
 }
-.hamburger__link {
-  display: block;
-  font-size: 18px;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #fff;
-}
 .hamburger__social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21927,14 +21919,6 @@ a:hover {
   transform: translateX(-10px);
   visibility: hidden;
 }
-.hamburger__link {
-  display: block;
-  font-size: 18px;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #fff;
-}
 .hamburger__social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22421,25 +22405,13 @@ a:hover {
 }
 
 .hamburger__link {
-  font-weight: 300;
+  font-weight: 500;
   display: block;
-  font-size: 30px;
-  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
   color: #fff;
   line-height: 1.5;
-}
-@media screen and (min-width: 1260px) {
-
-}
-@media screen and (min-width: 1023px) {
-  .close_search {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-
 }
 @media screen and (min-width: 320px) {
   .header__search {
@@ -22474,5 +22446,25 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+
+}
+@media screen and (min-width: 1023px) {
+  .close_search {
+    display: none;
+  }
+  .banner_cover {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .header__search {
+    width: 594px;
+  }
+  .header__search:before {
+    left: 15px;
+    top: 13px;
   }
 }
