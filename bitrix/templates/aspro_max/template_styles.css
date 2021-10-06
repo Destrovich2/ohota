@@ -5755,7 +5755,6 @@ div.title-search-result td.title-search-price span {
 .bx_searche .bx_img_element img {
   max-width: 100%;
   max-height: 100%;
-  margin-left: 12.5px;
   margin-right: 0;
 }
 .bx_searche .bx_image {
@@ -10953,8 +10952,8 @@ body .filter input[type="radio"]:checked + label:after {
 }
 .header__search:before {
   content: "";
-  left: 26px;
-  top: 9px;
+  left: 35px;
+  top: 37px;
   display: block;
   position: absolute;
   width: 15px;
@@ -20250,18 +20249,6 @@ body .ymaps-b-balloon:before {
 .contacts-page-map .bx-yandex-view-layout {
   border-top-width: 0px;
 }
-.header__search-input {
-  border: 2px solid #FFD300 !important;
-  padding-left: 50px;
-  font-size: 14px !important;
-  font-family: "EXO 2", sans-serif;
-  color: #fff !important;
-  background-color: transparent !important;
-  height: 32px !important;
-  width: 100%;
-  padding-bottom: 4px;
-  outline: none !important;
-}
 .contacts.contacts-page-map-overlay {
   padding: 20px 20px 20px;
   position: relative;
@@ -21341,28 +21328,20 @@ table.contacts-stores tr.item td:last-of-type {
     display: flex;
     right: 20px;
   }
-  .header__search:before {
-    top: 41px;
-    left: 40px;
-    width: 25px;
-    height: 25px;
-  }
   .header__search-input::placeholder {
     color: fff;
   }
-  .header__search-input {
-    border: 2px solid #FFD300 !important;
-    padding-left: 50px;
-    font-size: 22px !important;
-    font-family: "EXO 2", sans-serif;
-    color: #fff !important;
-    background-color: transparent !important;
-    height: 60px !important;
-    width: 100%;
-    padding-bottom: 4px;
-    outline: none !important;
-    font-weight: 700;
-  }
+}
+.header__search-input, #title-search-input_fixed {
+  border: 2px solid #FFD300;
+  padding-left: 50px;
+  font-size: 14px;
+  font-family: "EXO 2", sans-serif;
+  color: #fff;
+  background-color: transparent;
+  height: 37px;
+  outline: none;
+  font-weight: 700;
 }
 .header {
   background-color: #111111;
@@ -21656,7 +21635,6 @@ table.contacts-stores tr.item td:last-of-type {
 }
 
 .header__search {
-  width: 594px;
   position: relative;
 }
 div.title-search-result {
@@ -22213,7 +22191,6 @@ a:hover {
 }
 
 .header__search {
-  width: 594px;
   position: relative;
 }
 div.title-search-result {
@@ -22464,7 +22441,16 @@ a:hover {
 
 }
 @media screen and (min-width: 320px) {
+  .header__search {
+    width: 100%;
+  }
+  .header__search-input, #title-search-input_fixed {
+    width: 100%;
+  }
   .header__mob-search-trigger {
     z-index: 125;
+  }
+  .bx_item_element {
+    font-size: 12px;
   }
 }
