@@ -22464,5 +22464,7 @@ a:hover {
 
 }
 @media screen and (min-width: 320px) {
-
+  .header__mob-search-trigger {
+    z-index: 125;
+  }
 }
