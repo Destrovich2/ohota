@@ -22430,12 +22430,13 @@ a:hover {
   color: #fff;
   line-height: 1.5;
 }
-
-@media screen and (min-width: 1023px) {
-
-}
 @media screen and (min-width: 1260px) {
 
+}
+@media screen and (min-width: 1023px) {
+  .close_search {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) {
 
@@ -22452,5 +22453,26 @@ a:hover {
   }
   .bx_item_element {
     font-size: 12px;
+  }
+  .title-search-price {
+    width: 58px;
+    margin-left: 32px;
+  }
+  .close_search {
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: #FFD300;
+    font-size: 24px;
+    left: 0;
+    bottom: 0;
+  }
+  .close_search p {
+    height: 100%;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
