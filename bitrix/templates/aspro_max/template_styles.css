@@ -22483,3 +22483,16 @@ a:hover {
     top: 13px;
   }
 }
+a.btn.btn-default {
+  background-color: #ffd300;
+  border: none;
+  color: black;
+  width: 65px;
+  margin: 0;
+  position: absolute;
+  bottom: 10px;
+}
+a.btn.btn-default:hover, a.btn.btn-default:active, a.btn.btn-default:focus {
+  background-color: #ffd300;
+  border: none;
+}
