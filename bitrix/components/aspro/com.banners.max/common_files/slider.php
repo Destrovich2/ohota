@@ -489,9 +489,6 @@ $bHideOnNarrow = $arTheme['BIGBANNER_HIDEONNARROW']['VALUE'] === 'Y';?>
 
                                                 <?if($arItem['PROPERTIES']['SHOW_PRICES']['VALUE'] == "Y"):?>
                                                     <div class="main-banner__price">
-                                                        <?if($arItem['PROPERTIES']['SHOW_OLD_PRICE']['VALUE'] == "Y"):?>
-                                                            <div class="main-banner__price-old"><?=$arPrice["RESULT_PRICE"]["BASE_PRICE"]?>Р</div>
-                                                        <?endif;?>
                                                         <div class="main-banner__price-current"><?=$arPrice["RESULT_PRICE"]["DISCOUNT_PRICE"]?>Р</div>
                                                     </div>
 
