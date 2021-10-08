@@ -22277,9 +22277,41 @@ a:hover {
   .header__auth {
     display: none;
   }
+  div.main-banner__price {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+  }
+  div.main-banner__price-current {
+    font-size: 29px !important;
+  }
+  a.btn.btn-default {
+    width: 88px;
+    position: absolute;
+    bottom: 25px;
+    left: 50px;
+    font-size: 12px !important;
+    line-height: 12px !important;
+    padding: 10px 14px 8px !important;
+  }
+  .catalog-n-pick {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) {
-
+  div.main-banner__price {
+    position: absolute;
+    bottom: 30px;
+    right: 100px;
+  }
+  a.btn.btn-default {
+    padding: 12px 21px 12px !important;
+    position: absolute;
+    width: 168px;
+    bottom: 30px;
+    left: 100px;
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 1023px) {
   .header {
@@ -22360,6 +22392,24 @@ a:hover {
   .swiper-button-prev:after, .swiper-button-next:after {
     background-color: #ffd300;
   }
+  div.main-banner__price {
+    position: absolute;
+    bottom: 30px;
+    right: 200px;
+  }
+  div.main-banner__price-current {
+    font-size: 50px !important;
+  }
+  a.btn.btn-default {
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+    line-height: 22px !important;
+    font-size: 20px !important;
+  }
+  .catalog-n-pick {
+    display: block;
+  }
 }
 @media screen and (min-width: 1260px) {
   .header__search {
@@ -22370,13 +22420,9 @@ a:hover {
     top: 13px;
   }
   div.main-banner__price {
-    position: absolute;
-    bottom: 30px;
     right: 300px;
   }
   a.btn.btn-default {
-    position: absolute;
-    bottom: 30px;
     left: 300px;
   }
   .header__btn {
@@ -22405,11 +22451,13 @@ div.main-banner__price-current {
   background-color: #ffd300;
   border: none;
   color: black;
-  width: 162px;
   margin: 0;
   font-size: 20px;
 }
 a.btn.btn-default:hover, a.btn.btn-default:active, a.btn.btn-default:focus {
   background-color: #ffd300;
   border: none;
+}
+.z-index__low {
+  z-index: 2 !important;
 }
