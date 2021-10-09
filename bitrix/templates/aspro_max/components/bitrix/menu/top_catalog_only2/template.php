@@ -19,7 +19,6 @@ $bManyItemsMenu = ($MENU_TYPE == '4');
 		]){?>
 
 
-
 	
 			<?if($arParams['ITEM']["LINK"]):?>
 			<div class="catalog-menu__item">
@@ -35,7 +34,7 @@ $bManyItemsMenu = ($MENU_TYPE == '4');
                   <div class="catalog-menu__col">
                     <div class="catalog-menu__section">
 						<?foreach($arParams['ITEM']["CHILD"] as $arSubSubItem):?>	
-							<a href="<?=$arSubSubItem['LINK']?>" class="catalog-menu__link"><?=$arSubSubItem['TEXT']?></a>
+							<a href="<?=$arSubSubItem['LINK']?>" class="catalog-menu__title"><?=$arSubSubItem['TEXT']?></a>
 						<?endforeach;?>
           			</div>
 		           </div>
