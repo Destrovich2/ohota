@@ -322,12 +322,6 @@ header .menu_top_block li .dropdown > li > a, .menu_top_block.catalog_block .dro
 	
 			<div class="carousel-2__item" data-id="<?=$arItem["ID"]?>" data-product_type="<?=$arItem["CATALOG_TYPE"]?>">
 			      <div class="carousel-2__available">
-			        <div class="carousel-2__available-ico">
-			          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-			            <ellipse cx="5.91151" cy="5" rx="4.98476" ry="5" fill="#78A962"></ellipse>
-			            <path d="M7.90527 3L5.39698 6L3.91747 4.27853" stroke="white" stroke-linecap="round"></path>
-			          </svg>
-			        </div>
 
 	               	<? $collItem = $arItem['CATALOG_QUANTITY'];
 	               	   if($collItem != 0){
@@ -348,10 +342,6 @@ header .menu_top_block li .dropdown > li > a, .menu_top_block.catalog_block .dro
 
 	               	?>
 			        <div class="carousel-2__available-text <?=$css_coll?>"><strong class="<?=$css_coll?>"><?=$text_one_coll?></strong><?=$text_two_coll?></div>
-			      </div>
-			      <div class="carousel-2__specs">
-			        <div class="carousel-2__specs-item"><strong>Диаметр колеса:</strong> 18.5 дюймов</div>
-			        <div class="carousel-2__specs-item"><strong>Материал рамы:</strong> аллюминий</div>
 			      </div>
 			      <? $UrlDetPicCart = CFile::GetPath($arItem['DETAIL_PICTURE']['ID']) ?>
 			      <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="carousel-2__img" tabindex="0"><img src="<?=$UrlDetPicCart?>"></a>
