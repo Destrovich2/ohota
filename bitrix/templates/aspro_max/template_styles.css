@@ -22202,11 +22202,30 @@ a:hover {
     max-width: 1430px;
     height: 260px;
     margin: 0 auto;
+    padding: 0;
   }
   .carousel-2__category {
     height: 260px !important;
     width: 100% !important;
     position: static !important;
+  }
+  div.carousel-2__tabs {
+    display: none;
+  }
+  div.carousel-2__carousel-wrapper {
+    display: none;
+  }
+  div.carousel-2 {
+    margin-bottom: 0;
+  }
+  div.carousel-2__wrapper {
+    padding-left: 0;
+  }
+  div.carousels {
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -22225,6 +22244,12 @@ a:hover {
   }
 }
 @media screen and (min-width: 1023px) {
+  div.carousels {
+    display: block;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
   .header {
     height: auto;
     position: static;
@@ -22350,7 +22375,9 @@ a:hover {
     width: 100%;
     padding: 0;
   }
-
+  div.carousel-2 {
+    margin-bottom: 110px;
+  }
   .catalog-n-pick__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -22368,11 +22395,21 @@ a:hover {
   }
   div.container-2 {
     height: 556px;
+    padding: 0 15px;
+  }
+  div.carousel-2__tabs {
+    display: flex;
+  }
+  div.carousel-2__carousel-wrapper {
+    display: block;
   }
   .carousel-2__category {
     height: 505px !important;
     width: 350px !important;
     position: absolute !important;
+  }
+  div.carousel-2__wrapper {
+    padding-left: 356px;
   }
   .carousel-2__img img {
     width: auto !important;
@@ -22441,4 +22478,7 @@ a.btn.btn-default:hover, a.btn.btn-default:active, a.btn.btn-default:focus {
 }
 .z-index__low {
   z-index: 2 !important;
+}
+.carousel-2__prices-old {
+  min-height: 24px;
 }
