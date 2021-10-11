@@ -32,7 +32,7 @@
 
 /*gallery*/
 .product-info-headnote + .product-detail-gallery {
-  padding-top: 20px;
+  padding-top: 120px;
 }
 .product-container .product-detail-gallery__slider {
   max-width: 450px;
@@ -2119,11 +2119,6 @@ body .simple_page .top-content-block > div {
   }
 }
 @media (max-width: 767px) {
-  .product-container .big .product-detail-gallery__item {
-    height: 300px;
-    line-height: 300px;
-    width: 300px;
-  }
   .product-container .product-detail-gallery__slider.thmb.product-detail-gallery__slider--vertical,
   body .product-detail-gallery__thmb-container .product-detail-gallery__slider {
     display: none;
