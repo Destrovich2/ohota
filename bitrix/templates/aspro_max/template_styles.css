@@ -19848,13 +19848,15 @@ div.bx_item_list_you_looked_horizontal:not(.subsribe-page) .bx_item_list_slide {
 }
 #main .basket_hover_block .cart-empty .cart-empty__info .btn {
   background-color: transparent;
+  left: 0;
   width: 100%;
+  bottom: 0;
   border-color: transparent;
   color: #333;
   color: var(--white_text_black);
   margin: 23px -30px 0;
-  padding-top: 23px;
-  padding-bottom: 21px;
+  padding-top: 23px !important;
+  padding-bottom: 21px !important;
   position: relative;
   border-radius: 0 0 3px 3px;
 }
@@ -22485,3 +22487,16 @@ a.btn.btn-default:hover, a.btn.btn-default:active, a.btn.btn-default:focus {
 .catalog-menu__title:hover {
   color: #FEC300;
 }
+div.menu_top_block.catalog_block .dropdown > li.full.v_bottom > .dropdown, header .menu_top_block.catalogfirst li.full.v_bottom > .dropdown {
+  border: none;
+}
+div.menu_top_block.catalog_block .dropdown > li.full.v_bottom > .dropdown > li.current, header .menu.top.menu_top_block.catalogfirst li.full.v_bottom > .dropdown > li {
+  background-color: #111111;
+}
+div.menu_top_block.catalog_block .dropdown > li.full.v_bottom > .dropdown > li.current a, header .menu.top.menu_top_block.catalogfirst li.full.v_bottom > .dropdown > li {
+  color: white;
+}
+div.menu_top_block.catalog_block .dropdown > li.full.v_bottom > .dropdown > li.current a:hover span, header .menu.top.menu_top_block.catalogfirst li.full.v_bottom > .dropdown > li {
+  color: white;
+}
+

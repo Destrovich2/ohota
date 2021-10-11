@@ -3,6 +3,7 @@
 <?use \Bitrix\Main\Localization\Loc,
 	  \Bitrix\Main\Web\Json;?>
 
+
                   	<?foreach($arResult["ITEMS"] as $arItem):?>
 
                   		<? //echo '<pre>' ?>

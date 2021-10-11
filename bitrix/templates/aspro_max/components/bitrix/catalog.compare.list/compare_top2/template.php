@@ -2,9 +2,6 @@
 <!--noindex-->
 	<?$count=count($arResult);?>
 	<?
-    echo "<pre>";
-    echo var_dump($arResult);
-    echo "</pre>";
 	$type_svg = '';
 	if($arParams["CLASS_ICON"])
 	{
