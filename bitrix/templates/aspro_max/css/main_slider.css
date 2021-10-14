@@ -160,7 +160,7 @@ body .top_slider_wrapp .main-slider .main-slider__item:not(.image) .img img {
   background-image: url(images/loaders/double_ring.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: auto;
+  background-size: 50%;
 }
 .top_slider_wrapp .main-slider .main-slider__wrapper .main-slider__item {
   background-size: cover;
@@ -743,9 +743,6 @@ body .short_block.v2 .top_slider_wrapp .main-slider .text .banner_text {
   }
   .navigation_offset .swiper-button-prev {
     left: -10px;
-  }
-  .top_slider_wrapp .main-slider__item tr.main_info {
-    background-image: none !important;
   }
   .top_slider_wrapp.view_2 .main-slider__item tr.adaptive_info {
     display: none;

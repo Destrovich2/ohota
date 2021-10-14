@@ -21078,7 +21078,7 @@ table.contacts-stores tr.item td:last-of-type {
     width: 100%;
   }
   .carousel-2:nth-child(odd){
-    margin-right: 15px;
+    margin-right: 5px;
   }
   .carousel-2 .container {
     padding: 0 !important;
@@ -22248,14 +22248,17 @@ a:hover {
   .product-info-headnote__rating {
     margin-bottom: 30px;
   }
-  .product-container .buy_block .counter_wrapp.list {
-    display: none;
-  }
   body div.product-container .product-info {
     padding: 0;
   }
   div.product-container .product-info {
     padding: 0;
+  }
+  div.carousel-2 {
+    width: 50%;
+  }
+  div.carousel-2__category-name {
+    font-size: 22px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -22405,6 +22408,9 @@ a:hover {
     width: 100%;
     padding: 0;
   }
+  div.carousel-2__category-name {
+    font-size: 36px;
+  }
   div.carousel-2 {
     margin-bottom: 110px;
   }
@@ -22456,6 +22462,9 @@ a:hover {
   }
   .product-container .buy_block .counter_wrapp.list {
     display: flex;
+  }
+  div.carousel-2 {
+    width: auto;
   }
 }
 @media screen and (min-width: 1260px) {
@@ -22521,6 +22530,7 @@ a.btn.btn-default:hover, a.btn.btn-default:active, a.btn.btn-default:focus {
 .catalog-menu__title:hover {
   color: #FEC300;
 }
+
 div.menu_top_block.catalog_block .dropdown > li.full.v_bottom > .dropdown, header .menu_top_block.catalogfirst li.full.v_bottom > .dropdown {
   border: none;
 }
@@ -22533,6 +22543,7 @@ div.menu_top_block.catalog_block .dropdown > li.full.v_bottom > .dropdown > li.c
 div.menu_top_block.catalog_block .dropdown > li.full.v_bottom > .dropdown > li.current a:hover span, header .menu.top.menu_top_block.catalogfirst li.full.v_bottom > .dropdown > li {
   color: white;
 }
+
 
 .card__main-title {
   color: #000;
@@ -22824,23 +22835,26 @@ button.owl-next{
 
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   .product-container .info_item .adaptive-block {
     max-width: 100%;
     margin: 30px auto 0;
   }
+
   .counter_block.md, .counter_block.md input[type="text"] {
     height: 20px;
     font-size: 25px;
     margin-top: -9px;
     display: none;
   }
+
   .counter_wrapp.list > div {
     float: left;
     width: 100%;
     margin: 0px 0px 8px;
     padding: 0px 4px;
   }
+
   .card__main-buy {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -22850,6 +22864,11 @@ button.owl-next{
     font-size: 33px;
     margin-right: 30px;
   }
-  .counter_block_inner{
+
+  .counter_block_inner {
     display: none;
   }
+}
+.middle {
+  background-color: #f5f5f5 !important;
+}
