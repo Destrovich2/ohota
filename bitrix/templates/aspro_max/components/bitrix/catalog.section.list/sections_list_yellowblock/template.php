@@ -23,8 +23,13 @@
                 <div class="catalog-n-pick__wrapper">
 	               <?foreach( $arResult["SECTIONS"] as $arItems ){
         			$this->AddEditAction($arItems['ID'], $arItems['EDIT_LINK'], CIBlock::GetArrayByID($arItems["IBLOCK_ID"], "SECTION_EDIT"));
-        			$this->AddDeleteAction($arItems['ID'], $arItems['DELETE_LINK'], CIBlock::GetArrayByID($arItems["IBLOCK_ID"], "SECTION_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_SECTION_DELETE_CONFIRM')));?>
-		
+        			$this->AddDeleteAction($arItems['ID'], $arItems['DELETE_LINK'], CIBlock::GetArrayByID($arItems["IBLOCK_ID"], "SECTION_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_SECTION_DELETE_CONFIRM')));
+        			if ($arItems['NAME'] == "Одежда" || $arItems['NAME'] == "Снаряжение") {
+
+
+
+        			?>
+
                         <div class="catalog-n-pick__item">
                           <a href="#" class="catalog-n-pick__title"><?=$arItems['NAME']?></a>
                           <div class="catalog-n-pick__catalog">
@@ -39,7 +44,7 @@
                             </svg>
                           </a>
                         </div>
-   
+                    <?php } ?>
 		          <?}?>
             </div>
         </div>

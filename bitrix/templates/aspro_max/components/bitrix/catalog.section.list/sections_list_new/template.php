@@ -498,7 +498,9 @@
                   <a href="<?=$arItems['SECTION_PAGE_URL']?>" class="carousel-2__category">
                     <div class="carousel-2__category-img-wrapper">
                       <? $UrlDetPic = CFile::GetPath($arItems['DETAIL_PICTURE']) ?>
-                      <div class="carousel-2__category-img carousel-2__img" style="background-image: url('<?=$UrlDetPic?>')"></div>
+                      <div class="carousel-2__category-img carousel-2__img" style="background-image: url('<?=$UrlDetPic?>')">
+                          <div class="black_cover"></div>
+                      </div>
                     </div>
                     <div class="carousel-2__category-name">
                       <span class="carousel-2__category-name-desk"><?=$arItems['NAME']?></span>
