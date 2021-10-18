@@ -452,7 +452,6 @@
 }
 </style>
 
-
 <?if($arResult["SECTIONS"]){?>
 	<?global $arTheme;
 	$iVisibleItemsMenu = CMax::GetFrontParametrValue('MAX_VISIBLE_ITEMS_MENU');
