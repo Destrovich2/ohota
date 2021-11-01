@@ -371,15 +371,15 @@ header .menu_top_block li .dropdown > li > a, .menu_top_block.catalog_block .dro
 					  
 					
 					  <?if($ident_sale === 'Y'): ?>
-	                  <div class="carousel-2__prices-old">Р<?=$old_price?></div>
+	                  <div class="carousel-2__prices-old"><?=$old_price?> ₽</div>
 	                  <?endif;?>
-	                  <div class="carousel-2__prices-current">Р<?=$price_for_print?></div>
+	                  <div class="carousel-2__prices-current"><?=$price_for_print?> ₽</div>
 			        </div>
-			        <div class="carousel-2__colors">
+			        <!--<div class="carousel-2__colors">
 			          <a href="#" class="carousel-2__colors-item" style="background-color: #ffd704"></a>
 			          <a href="#" class="carousel-2__colors-item" style="background-color: #ff0000"></a>
 			          <a href="#" class="carousel-2__colors-item" style="background-color: #2d2d2d"></a>
-			        </div>
+			        </div>-->
 			      </div>
 			      <div class="carousel-2__footer">
 			       

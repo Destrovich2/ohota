@@ -10,6 +10,8 @@ html {
 }
 body {
   min-height: 100%;
+}
+body {
   font-family: "EXO 2", sans-serif;
 }
 body {
@@ -22873,4 +22875,11 @@ button.owl-next{
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.67);
+}
+html body,body div.bx-yandex-map, body .ymaps-map .ymaps-b-balloon, .fancybox-title{font-family:  "EXO 2", sans-serif;}
+.greencoll {
+  color: #78a962;
+}
+.redcoll {
+  color: #a72214;
 }
