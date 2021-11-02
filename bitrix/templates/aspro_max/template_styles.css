@@ -22883,3 +22883,6 @@ html body,body div.bx-yandex-map, body .ymaps-map .ymaps-b-balloon, .fancybox-ti
 .redcoll {
   color: #a72214;
 }
+.cat__cards {
+  width: 100%;
+}

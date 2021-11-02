@@ -478,10 +478,14 @@
         <div class="carousel-2">
           <div class="container-2">
             <div class="carousel-2__tabs">
+                <?php $count = 0; ?>
             <?$tab_i = 0?>
               <a href="#" class="carousel-2__tab --active">Популярные</a>
           		  <?foreach($arItems["SECTIONS"] as $arSect ):?>
+                    <?php if ($count < 8) { ?>
                     <a href="<?=$arSect['SECTION_PAGE_URL']?>" class="carousel-2__tab"><?=$arSect['NAME']?></a>
+                          <?php $count++; ?>
+                      <?php }?>
         				<? $tab_i++; endforeach;?>
             </div>
 

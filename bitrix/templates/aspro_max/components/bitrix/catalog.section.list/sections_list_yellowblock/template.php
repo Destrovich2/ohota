@@ -33,9 +33,13 @@
                         <div class="catalog-n-pick__item">
                           <a href="#" class="catalog-n-pick__title"><?=$arItems['NAME']?></a>
                           <div class="catalog-n-pick__catalog">
-                             <?foreach($arItems["SECTIONS"] as $arSect ):?>
-                                    <a href="<?=$arSect['SECTION_PAGE_URL']?>" class="catalog-n-pick__catalog-item"><?=$arSect['NAME']?></a>
-                             <? endforeach;?>
+                              <?php $count = 0; ?>
+                                  <?foreach($arItems["SECTIONS"] as $arSect ):?>
+                                      <?php if ($count < 6) { ?>
+                                      <a href="<?=$arSect['SECTION_PAGE_URL']?>" class="catalog-n-pick__catalog-item"><?=$arSect['NAME']?></a>
+                                          <?php $count++; ?>
+                                      <?php }?>
+                                  <? endforeach;?>
                           </div>
                           <a href="<?=$arItems['SECTION_PAGE_URL']?>" class="catalog-n-pick__goto">
                             Перейти
