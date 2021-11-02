@@ -329,13 +329,6 @@ header .menu_top_block li .dropdown > li > a, .menu_top_block.catalog_block .dro
 
 		<div class="list-item">
                   <div class="list-item__available">
-                    <div class="list-item__available-ico">
-                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="5.91151" cy="5" rx="4.98476" ry="5" fill="#78A962"></ellipse>
-                        <path d="M7.90527 3L5.39698 6L3.91747 4.27853" stroke="white" stroke-linecap="round"></path>
-                      </svg>
-                    </div>
-
 	               	<? $collItem = $arItem['CATALOG_QUANTITY'];
 	               	   if($collItem != 0){
 	               	   		$text_one_coll = 'В наличии, ';
@@ -362,16 +355,7 @@ header .menu_top_block li .dropdown > li > a, .menu_top_block.catalog_block .dro
                   </a>
                   <div class="list-item__cont">
                     <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="list-item__title"><?=$arItem["NAME"]?></a>
-                    <div class="list-item__descr">21-скоростная трансмиссия Shimano позволяет выбрать оптимальную нагрузку в зависимости от рельефа. Предусмотрена...</div>
-                    <div class="list-item__specs">
-                      <div class="list-item__specs-item"><strong>Диаметр колеса:</strong> 18.5 дюймов</div>
-                      <div class="list-item__specs-item"><strong>Материал рамы:</strong> аллюминий</div>
-                    </div>
-                    <div class="list-item__colors">
-                      <a href="#" class="list-item__colors-item" style="background-color: #ffd704"></a>
-                      <a href="#" class="list-item__colors-item" style="background-color: #ff0000"></a>
-                      <a href="#" class="list-item__colors-item" style="background-color: #2d2d2d"></a>
-                    </div>
+                    <div class="list-item__descr"></div>
                   </div>
                   <div class="list-item__right">
                     <div class="list-item__prices">
@@ -398,9 +382,9 @@ header .menu_top_block li .dropdown > li > a, .menu_top_block.catalog_block .dro
 						?>
 
 					  <?if($ident_sale === 'Y'): ?>
-	                  <div class="list-item__prices-old">Р<?=$old_price?></div>
+	                  <div class="list-item__prices-old"><?=$old_price?> ₽</div>
 	                  <?endif;?>
-	                  <div class="list-item__prices-current">Р<?=$price_for_print?></div>
+	                  <div class="list-item__prices-current"><?=$price_for_print?> ₽</div>
                     </div>
 
 
