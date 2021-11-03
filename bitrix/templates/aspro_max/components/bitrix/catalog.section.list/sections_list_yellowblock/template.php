@@ -31,7 +31,7 @@
         			?>
 
                         <div class="catalog-n-pick__item">
-                          <a href="#" class="catalog-n-pick__title"><?=$arItems['NAME']?></a>
+                          <p class="catalog-n-pick__title"><?=$arItems['NAME']?></p>
                           <div class="catalog-n-pick__catalog">
                               <?php $count = 0; ?>
                                   <?foreach($arItems["SECTIONS"] as $arSect ):?>
