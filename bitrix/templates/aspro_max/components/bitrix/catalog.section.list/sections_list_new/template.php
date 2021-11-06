@@ -482,7 +482,7 @@
             <?$tab_i = 0?>
               <a href="#" class="carousel-2__tab --active">Популярные</a>
           		  <?foreach($arItems["SECTIONS"] as $arSect ):?>
-                    <?php if ($count < 8) { ?>
+                    <?php if ($count < 5) { ?>
                     <a href="<?=$arSect['SECTION_PAGE_URL']?>" class="carousel-2__tab"><?=$arSect['NAME']?></a>
                           <?php $count++; ?>
                       <?php }?>

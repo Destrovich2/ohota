@@ -21084,7 +21084,6 @@ table.contacts-stores tr.item td:last-of-type {
     width: 100%;
   }
   .carousel-2:nth-child(odd){
-    margin-right: 5px;
   }
   .carousel-2 .container {
     padding: 0 !important;
@@ -21113,50 +21112,6 @@ table.contacts-stores tr.item td:last-of-type {
   .carousel {
     padding-top: 20px !important;
     margin-bottom: 0px !important;
-  }
-  footer {
-    text-align: center;
-    margin-top: -76px;
-  }
-  .footer__wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    text-align: center;
-  }
-  .footer__col {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  .footer__col.--hide-mobile {
-    display: none;
-  }
-  .footer__col + .footer__col {
-    margin-top: 40px;
-  }
-  .footer__col {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
 }
 
@@ -22043,6 +21998,101 @@ a:hover {
   justify-content: center;
   cursor: pointer;
 }
+
+.footer {
+  margin-top: 70px;
+  background-color: #151416;
+  padding-top: 36px;
+  padding-bottom: 55px;
+}
+.container55 {
+  max-width: 1430px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.footer__title {
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 87%;
+  margin-bottom: 24px;
+}
+.footer__tel {
+  display: block;
+  color: #878787;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.footer__tel:hover {
+  display: block;
+  color: #878787;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.footer__hours {
+  font-size: 14px;
+  color: #FD6C03;
+  margin-bottom: 12px;
+}
+.footer__mail {
+  display: block;
+  font-size: 14px;
+  color: #878787;
+  margin-bottom: 12px;
+}
+.footer__addr {
+  display: block;
+  font-size: 14px;
+  color: #878787;
+  line-height: 130%;
+}
+.footer__title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 87%;
+  margin-bottom: 24px;
+}
+.footer__nav {
+  font-size: 14px;
+  color: #878787;
+  margin-bottom: 12px;
+  display: block;
+}
+.footer__social {
+  margin-bottom: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -5px;
+}
+.footer__social-item {
+  display: block;
+  margin-right: 10px
+}
+.footer__social-item svg {
+  display: block;
+  width: 16px;
+  height: auto;
+}
+.footer__payment {
+  width: 200px;
+  margin-top: -16px;
+}
+.footer__payment img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .header__btn-complete-close img {
   display: block;
   width: 8px;
@@ -22230,6 +22280,7 @@ a:hover {
     padding-left: 0;
   }
   div.carousels {
+    flex-wrap: wrap;
     display: flex;
     margin-bottom: 30px;
     margin-left: 15px;
@@ -22266,6 +22317,34 @@ a:hover {
   div.carousel-2__category-name {
     font-size: 22px;
   }
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__col.--hide-mobile {
+    display: none;
+  }
+  .footer__col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .footer__col + .footer__col {
+    margin-top: 40px;
+  }
 }
 @media screen and (min-width: 768px) {
   div.main-banner__price {
@@ -22283,6 +22362,22 @@ a:hover {
   }
 }
 @media screen and (min-width: 1023px) {
+  .footer__wrapper {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-items: normal;
+    text-align: left;
+  }
+  .footer__col {
+    align-items: normal;
+    text-align: left;
+  }
+  .footer__col.--hide-mobile {
+    display: flex;
+  }
+  .footer__col + .footer__col {
+    margin-top: 0px;
+  }
   div.carousels {
     display: block;
     margin-bottom: 0;
