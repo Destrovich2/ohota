@@ -22990,3 +22990,6 @@ html body,body div.bx-yandex-map, body .ymaps-map .ymaps-b-balloon, .fancybox-ti
 .cat__cards {
   width: 100%;
 }
+.carousel {
+  display: none;
+}

@@ -8,7 +8,7 @@ global $arTheme;
             <div class="footer__col">
               <div class="footer__title">Контакты</div>
               <?CMax::ShowFootersPhones('no-icons');?>
-              <div class="footer__hours">Пн.-Пт. с 10<sup>00</sup>о 19<sup>00</sup></div>
+              <div class="footer__hours">Ежедневно, с 8<sup>00</sup>до 17<sup>00</sup> (по МСК)</div>
               <?=CMax::showEmail2('email blocks')?>
               <div class="footer__addr">
                 <?=CMax::showAddress2('address blocks')?>
