@@ -21083,8 +21083,6 @@ table.contacts-stores tr.item td:last-of-type {
   .carousel-2 {
     width: 100%;
   }
-  .carousel-2:nth-child(odd){
-  }
   .carousel-2 .container {
     padding: 0 !important;
   }
@@ -22215,9 +22213,6 @@ a:hover {
     justify-content: center;
     align-items: center;
   }
-  .banner_cover {
-    padding-top: 70px;
-  }
   .header__callback {
     display: none;
   }
@@ -22234,15 +22229,6 @@ a:hover {
   }
   div.main-banner__price-current {
     font-size: 29px !important;
-  }
-  a.btn.btn-default {
-    width: 88px;
-    position: absolute;
-    bottom: 25px;
-    left: 50px;
-    font-size: 12px !important;
-    line-height: 12px !important;
-    padding: 10px 14px 8px !important;
   }
   .catalog-n-pick {
     display: none;
@@ -22274,11 +22260,18 @@ a:hover {
     display: none;
   }
   div.carousel-2 {
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
   div.carousel-2__wrapper {
     padding-left: 0;
   }
+  .carousel-2:nth-child(odd){
+    padding-right: 2.5px;
+  }
+  .carousel-2:nth-child(even){
+    padding-left: 2.5px;
+  }
+
   div.carousels {
     flex-wrap: wrap;
     display: flex;
@@ -22289,12 +22282,6 @@ a:hover {
   body .product-container .big .product-detail-gallery__item, body div.product-container .product-detail-gallery__slider {
     max-width: 100%;
     max-height: 100%;
-  }
-  .owl-carousel .owl-stage {
-    width: auto !important;
-  }
-  div.owl-carousel.owl-drag .owl-item {
-    width: auto !important;
   }
   .card__main-title {
     font-size: 18px;
@@ -22345,6 +22332,11 @@ a:hover {
   .footer__col + .footer__col {
     margin-top: 40px;
   }
+  .header_space {
+    display: block;
+    height: 80px;
+    width: 100%;
+  }
 }
 @media screen and (min-width: 768px) {
   div.main-banner__price {
@@ -22352,16 +22344,11 @@ a:hover {
     bottom: 30px;
     right: 100px;
   }
-  a.btn.btn-default {
-    padding: 12px 21px 12px !important;
-    position: absolute;
-    width: 168px;
-    bottom: 30px;
-    left: 100px;
-    font-size: 20px;
-  }
 }
 @media screen and (min-width: 1023px) {
+  .header_space {
+    display: none;
+  }
   .footer__wrapper {
     -ms-flex-direction: row;
     flex-direction: row;
@@ -22493,13 +22480,6 @@ a:hover {
     font-size: 50px !important;
   }
 
-  a.btn.btn-default {
-    position: absolute;
-    bottom: 30px;
-    left: 100px;
-    line-height: 22px !important;
-    font-size: 20px !important;
-  }
 
   .catalog-n-pick {
     display: block;
@@ -22578,9 +22558,6 @@ a:hover {
   }
   div.main-banner__price {
     right: 300px;
-  }
-  a.btn.btn-default {
-    left: 300px;
   }
   .header__btn {
     padding: 0 9px
@@ -23242,4 +23219,15 @@ header .menu_top_block li .dropdown > li > a, .menu_top_block.catalog_block .dro
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
   }
+}
+.filter-panel svg .cls-1 {
+  fill: #000 !important;
+  fill: var(--white_text_black);
+  fill-rule: evenodd;
+}
+.filter-panel__filter .bx-filter-title span {
+  display: inline;
+}
+.main-banner__price-current {
+  display: none;
 }

@@ -165,6 +165,7 @@ $dopClass .= ' high_one_row_header';
           </div>
         </div>
       </header>
+      <div class="header_space"></div>
 <script type="text/javascript">
 $(".header__catalog-wrapper").hover(function () {
 $(".header").toggleClass("--faded");
