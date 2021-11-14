@@ -1485,5 +1485,6 @@ if(!empty($arResult['DISPLAY_PROPERTIES']))
 		}
 	}
 	$arResult["GROUPS_PROPS"] = $arGroupsProp;
-}
+};
+
 ?>

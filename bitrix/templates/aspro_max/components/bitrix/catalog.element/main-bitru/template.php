@@ -1,7 +1,24 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?$this->setFrameMode(true);?>
 <?use \Bitrix\Main\Localization\Loc;?>
+	  <?
+	  $APPLICATION->IncludeComponent("bitrix:breadcrumb",".default", Array(
+        "START_FROM" => "0", 
+        "PATH" => "", 
+        "SITE_ID" => "s1" 
+    )
+);
 
+global $goods_chain_info;
+   if(is_array($arResult) && isset($arResult['NAME']) && isset($arResult['DETAIL_PAGE_URL']))
+   {
+      $goods_chain_info = array(
+         'NAME' => $arResult['NAME'],
+         'DETAIL_PAGE_URL' => $arResult['DETAIL_PAGE_URL']
+      );
+   }
+
+?>
 <div class="basket_props_block" id="bx_basket_div_<?=$arResult["ID"];?>" style="display: none;">
 	<?if (!empty($arResult['PRODUCT_PROPERTIES_FILL'])){
 		foreach ($arResult['PRODUCT_PROPERTIES_FILL'] as $propID => $propInfo){?>
@@ -260,7 +277,10 @@ $iCountProps = count($arResult['DISPLAY_PROPERTIES']);?>
 									<div class="item-title font_sm"><?=$arSKU['NAME']?></div>
 									<div class="quantity_block_wrapper">
 										<?if($arQuantityData["RIGHTS"]["SHOW_QUANTITY"]):?>
-											<?=$arskuQuantityData["HTML"];?>
+											<?=$arskuQuantityData["HTML"];
+
+											
+											?>
 										<?endif;?>
 										<?if($arSKU['PROPERTIES']['ARTICLE']['VALUE']):?>
 											<div class="font_sxs muted article">
@@ -840,7 +860,11 @@ $iCountProps = count($arResult['DISPLAY_PROPERTIES']);?>
 
 											<?//stock?>
 											<div class="quantity_block_wrapper">
-												<?=$arQuantityData["HTML"];?>
+												<?=$arQuantityData["HTML"];
+												// echo "<pre>";
+												// print_r($arQuantityData);
+												// echo "</pre>";
+												?>
 												<?if($arParams["SHOW_CHEAPER_FORM"] == "Y"):?>
 													<div class="cheaper_form muted777 font_sxs">
 														<?=CMax::showIconSvg("cheaper", SITE_TEMPLATE_PATH.'/images/svg/catalog/cheaper.svg', '', '', true, false);?>

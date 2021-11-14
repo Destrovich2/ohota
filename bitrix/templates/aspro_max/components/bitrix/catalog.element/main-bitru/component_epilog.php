@@ -1017,7 +1017,7 @@ if( !in_array('modules', $arBlockOrder) ){
 								"PAGER_TEMPLATE" => ".default",
 								"DISPLAY_TOP_PAGER" => "N",
 								"DISPLAY_BOTTOM_PAGER" => "Y",
-								"PAGER_TITLE" => "Íîâîñòè",
+								"PAGER_TITLE" => "ÃÃ®Ã¢Ã®Ã±Ã²Ã¨",
 								"PAGER_SHOW_ALWAYS" => "N",
 								"PAGER_DESC_NUMBERING" => "N",
 								"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -1090,7 +1090,7 @@ if( !in_array('modules', $arBlockOrder) ){
 								"PAGER_TEMPLATE" => ".default",
 								"DISPLAY_TOP_PAGER" => "N",
 								"DISPLAY_BOTTOM_PAGER" => "Y",
-								"PAGER_TITLE" => "Íîâîñòè",
+								"PAGER_TITLE" => "ÃÃ®Ã¢Ã®Ã±Ã²Ã¨",
 								"PAGER_SHOW_ALWAYS" => "N",
 								"PAGER_DESC_NUMBERING" => "N",
 								"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -1163,7 +1163,7 @@ if( !in_array('modules', $arBlockOrder) ){
 								"PAGER_TEMPLATE" => ".default",
 								"DISPLAY_TOP_PAGER" => "N",
 								"DISPLAY_BOTTOM_PAGER" => "Y",
-								"PAGER_TITLE" => "Íîâîñòè",
+								"PAGER_TITLE" => "ÃÃ®Ã¢Ã®Ã±Ã²Ã¨",
 								"PAGER_SHOW_ALWAYS" => "N",
 								"PAGER_DESC_NUMBERING" => "N",
 								"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -1238,7 +1238,7 @@ if( !in_array('modules', $arBlockOrder) ){
 								"PAGER_TEMPLATE" => ".default",
 								"DISPLAY_TOP_PAGER" => "N",
 								"DISPLAY_BOTTOM_PAGER" => "Y",
-								"PAGER_TITLE" => "Íîâîñòè",
+								"PAGER_TITLE" => "ÃÃ®Ã¢Ã®Ã±Ã²Ã¨",
 								"PAGER_SHOW_ALWAYS" => "N",
 								"PAGER_DESC_NUMBERING" => "N",
 								"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -1313,7 +1313,7 @@ if( !in_array('modules', $arBlockOrder) ){
 								"PAGER_TEMPLATE" => ".default",
 								"DISPLAY_TOP_PAGER" => "N",
 								"DISPLAY_BOTTOM_PAGER" => "Y",
-								"PAGER_TITLE" => "Íîâîñòè",
+								"PAGER_TITLE" => "ÃÃ®Ã¢Ã®Ã±Ã²Ã¨",
 								"PAGER_SHOW_ALWAYS" => "N",
 								"PAGER_DESC_NUMBERING" => "N",
 								"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -1684,4 +1684,10 @@ if( !in_array('modules', $arBlockOrder) ){
 	);
 </script>
 <?$des->finishDynamicArea();?>
-<?if($_GET["RID"]){?><script>$(document).ready(function(){$("<div class='rid_item' data-rid='<?=htmlspecialcharsbx($_GET["RID"]);?>'></div>").appendTo($('body'));});</script><?}?>
+<?
+if($_GET["RID"]){?><script>$(document).ready(function(){$("<div class='rid_item' data-rid='<?=htmlspecialcharsbx($_GET["RID"]);?>'></div>").appendTo($('body'));});</script><?};
+
+
+
+
+?>
