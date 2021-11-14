@@ -135,7 +135,7 @@
 			      // echo '</pre>';
 			?>
 			      <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="carousel-2__img" tabindex="0"><img src="<?=$UrlDetPicCart?>"></a>
-			      <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="carousel-2__title"><?=$arItem['NAME']?></a>
+			      <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="carousel-2__title"><?=$arItem['NAME']?>, оптом</a>
 			      <div class="carousel-2__prices-n-colors">
 			        <div class="carousel-2__prices">
 						<? global $USER; 

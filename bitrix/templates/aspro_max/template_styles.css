@@ -23016,10 +23016,10 @@ html body,body div.bx-yandex-map, body .ymaps-map .ymaps-b-balloon, .fancybox-ti
   height: auto;
 }
 .carousel-2__title {
+  display: block;
   font-size: 13px;
   color: #000;
   font-family: "Open Sans", sans-serif;
-  margin-bottom: 30px;
 }
 .carousel-2__prices-n-colors {
   display: -webkit-box;

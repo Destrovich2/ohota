@@ -329,24 +329,74 @@ header .menu_top_block li .dropdown > li > a, .menu_top_block.catalog_block .dro
 
 		<div class="list-item">
                   <div class="list-item__available">
-	               	<? $collItem = $arItem['CATALOG_QUANTITY'];
-	               	   if($collItem != 0){
-	               	   		$text_one_coll = 'В наличии, ';
-	               	   		$text_two_coll = 'есть на складе';
-	               	   		$css_coll = 'greencoll';
-	               	   } 
-	               	   if($collItem === 1) {
-	               	   		$text_one_coll = 'В наличии, ';
-	               	   		$text_two_coll = 'осталась одна штука';
-	               	   		$css_coll = 'yellowcoll';
-	               	   } 
-	               	   if($collItem === 0){
-	               	   		$text_one_coll = 'Нет в наличии';
-	               	   		$text_two_coll = '';
-	               	   		$css_coll = 'redcoll';
-	               	   }
+	               <? 
+                                /* Выводим остатки всех торговых предложений товара */  
+                            $res = CCatalogSKU::getOffersList(
+        $arItem["ID"], // массив ID товаров
+         // указываете ID инфоблока только в том случае, когда ВЕСЬ массив товаров из одного инфоблока и он известен
+        $skuFilter = array(), // дополнительный фильтр предложений. по умолчанию пуст.
+        $fields = array(),  // массив полей предложений. даже если пуст - вернет ID и IBLOCK_ID
+        $propertyFilter = array() /* свойства предложений. имеет 2 ключа:
+                               ID - массив ID свойств предложений
+                                      либо
+                               CODE - массив символьных кодов свойств предложений
+                                     если указаны оба ключа, приоритет имеет ID*/
+ );
+                            if($res){
+                                
+                            foreach($res as $resItem)   {
+                            
 
-	               	?>
+
+                            foreach($resItem as $resItem2)  {
+                            $rsStore = CCatalogStoreProduct::GetList(array(), array('PRODUCT_ID' =>$resItem2["ID"], 'STORE_ID' => '1'), false, false, array('AMOUNT')); 
+                            if ($arStore = $rsStore->Fetch()){
+                                //echo $arStore['AMOUNT'];
+                                $sum+= $arStore['AMOUNT'];
+                            }
+                            
+                            }
+                            //echo $sum; //Общее количество товара по всем торговым предложениям
+                            if($sum != 0){
+                                    $text_one_coll = 'В наличии, ';
+                                    $text_two_coll = 'есть на складе';
+                                    $css_coll = 'greencoll';
+                               } 
+                               if($sum === 1) {
+                                    $text_one_coll = 'В наличии, ';
+                                    $text_two_coll = 'осталась одна штука';
+                                    $css_coll = 'yellowcoll';
+                               } 
+                               if($sum === 0){
+                                        $text_one_coll = 'Нет в наличии';
+                                        $text_two_coll = '';
+                                        $css_coll = 'redcoll';
+                                    
+                               }
+                            }
+                            } else {
+                                    $collItem = $arItem['CATALOG_QUANTITY'];
+                            //echo $collItem;
+                               if($collItem != 0){
+                                    $text_one_coll = 'В наличии, ';
+                                    $text_two_coll = 'есть на складе';
+                                    $css_coll = 'greencoll';
+                               } 
+                               if($collItem === 1) {
+                                    $text_one_coll = 'В наличии, ';
+                                    $text_two_coll = 'осталась одна штука';
+                                    $css_coll = 'yellowcoll';
+                               } 
+                               if($collItem === 0){
+                                        $text_one_coll = 'Нет в наличии';
+                                        $text_two_coll = '';
+                                        $css_coll = 'redcoll';
+                                    
+                               }
+                            }
+                            
+/* Конец Вывода остатка всех торговых предложений товара */ 
+    ?>
 	               	 <div class="carousel-2__available-text <?=$css_coll?>"><strong class="<?=$css_coll?>"><?=$text_one_coll?></strong><?=$text_two_coll?></div>
                   </div>
                   <? $UrlDetPicCart = CFile::GetPath($arItem['DETAIL_PICTURE']['ID']) ?>
