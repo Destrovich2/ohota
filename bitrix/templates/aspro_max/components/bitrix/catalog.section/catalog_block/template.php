@@ -2,6 +2,7 @@
 <?$this->setFrameMode(true);?>
 <?use \Bitrix\Main\Localization\Loc,
 	  \Bitrix\Main\Web\Json;?>
+	  
 <?if($arResult["ITEMS"]):?>
 	<?
 	$currencyList = '';
@@ -22,9 +23,11 @@
 							
 	$bHasBottomPager = $arParams["DISPLAY_BOTTOM_PAGER"] == "Y" && $arResult["NAV_STRING"];
 	?>
+
 	<?if($arParams["AJAX_REQUEST"] != "Y"):?>
 		<?$bSlide = (isset($arParams['SLIDE_ITEMS']) && $arParams['SLIDE_ITEMS']);?>
 		<?$bGiftblock = (isset($arParams['GIFT_ITEMS']) && $arParams['GIFT_ITEMS']);?>
+
 	<div class="top_wrapper items_wrapper <?=$templateName;?>_template <?=$arParams['IS_COMPACT_SLIDER'] ? 'compact-catalog-slider' : ''?>">
 		<div class="fast_view_params" data-params="<?=urlencode(serialize($arTransferParams));?>"></div>
 		<div class="catalog_block items row <?=$arParams['IS_COMPACT_SLIDER'] ? 'swipeignore mobile-overflow' : ''?> margin0 <?=$bHasBottomPager ? 'has-bottom-nav' : ''?> js_append ajax_load block flexbox<?=($bSlide ? ' owl-carousel owl-theme owl-bg-nav visible-nav short-nav hidden-dots swipeignore ' : '');?>"<?if($bSlide):?>data-plugin-options='{"nav": true, "autoplay" : false,  "autoplayTimeout" : "3000", "smartSpeed":1000, <?=(count($arResult["ITEMS"]) > 4 ? "\"loop\": true," : "")?> "responsiveClass": true, "responsive":{"0":{"items": 2},"600":{"items": 2},"768":{"items": 3},"1200":{"items": 4}}}'<?endif;?>>
@@ -38,9 +41,11 @@
 		?>
 		
 		<?
-		//echo '<pre>';
-		//print_r($arResult["SECTIONS_ID"]);
-		//echo '</pre>';
+//echo '<pre>';
+//print_r($arResult["SECTIONS_ID"]);
+//echo '</pre>';
+
+
 		?>
 
 		<? //foreach ($arResult["SECTION_ID_VARIABLE"] as $s => $arSect):?>	
@@ -53,27 +58,82 @@
 			<div class="carousel-2__item" data-id="<?=$arItem["ID"]?>" data-product_type="<?=$arItem["CATALOG_TYPE"]?>">
 			      <div class="carousel-2__available">
 
-	               	<? $collItem = $arItem['CATALOG_QUANTITY'];
-	               	   if($collItem != 0){
-	               	   		$text_one_coll = 'В наличии, ';
-	               	   		$text_two_coll = 'есть на складе';
-	               	   		$css_coll = 'greencoll';
-	               	   } 
-	               	   if($collItem === 1) {
-	               	   		$text_one_coll = 'В наличии, ';
-	               	   		$text_two_coll = 'осталась одна штука';
-	               	   		$css_coll = 'yellowcoll';
-	               	   } 
-	               	   if($collItem === 0){
-	               	   		$text_one_coll = 'Нет в наличии';
-	               	   		$text_two_coll = '';
-	               	   		$css_coll = 'redcoll';
-	               	   }           	
+	               	<? 
+	               /* Выводим остатки всех торговых предложений товара */	
+							$res = CCatalogSKU::getOffersList(
+        $arItem["ID"], // массив ID товаров
+         // указываете ID инфоблока только в том случае, когда ВЕСЬ массив товаров из одного инфоблока и он известен
+        $skuFilter = array(), // дополнительный фильтр предложений. по умолчанию пуст.
+        $fields = array(),  // массив полей предложений. даже если пуст - вернет ID и IBLOCK_ID
+        $propertyFilter = array() /* свойства предложений. имеет 2 ключа:
+                               ID - массив ID свойств предложений
+                                      либо
+                               CODE - массив символьных кодов свойств предложений
+                                     если указаны оба ключа, приоритет имеет ID*/
+ );
+							if($res){
+								
+							foreach($res as $resItem)	{
+							
+
+
+							foreach($resItem as $resItem2)	{
+							$rsStore = CCatalogStoreProduct::GetList(array(), array('PRODUCT_ID' =>$resItem2["ID"], 'STORE_ID' => '1'), false, false, array('AMOUNT')); 
+							if ($arStore = $rsStore->Fetch()){
+								//echo $arStore['AMOUNT'];
+								$sum+= $arStore['AMOUNT'];
+							}
+							
+							}
+							//echo $sum; //Общее количество товара по всем торговым предложениям
+							if($sum != 0){
+			               	   		$text_one_coll = 'В наличии, ';
+			               	   		$text_two_coll = 'есть на складе';
+			               	   		$css_coll = 'greencoll';
+			               	   } 
+			               	   if($sum === 1) {
+			               	   		$text_one_coll = 'В наличии, ';
+			               	   		$text_two_coll = 'осталась одна штука';
+			               	   		$css_coll = 'yellowcoll';
+			               	   } 
+			               	   if($sum === 0){
+										$text_one_coll = 'Нет в наличии';
+										$text_two_coll = '';
+										$css_coll = 'redcoll';
+									
+			               	   }
+							}
+							} else {
+									$collItem = $arItem['CATALOG_QUANTITY'];
+			               	//echo $collItem;
+			               	   if($collItem != 0){
+			               	   		$text_one_coll = 'В наличии, ';
+			               	   		$text_two_coll = 'есть на складе';
+			               	   		$css_coll = 'greencoll';
+			               	   } 
+			               	   if($collItem === 1) {
+			               	   		$text_one_coll = 'В наличии, ';
+			               	   		$text_two_coll = 'осталась одна штука';
+			               	   		$css_coll = 'yellowcoll';
+			               	   } 
+			               	   if($collItem === 0){
+										$text_one_coll = 'Нет в наличии';
+										$text_two_coll = '';
+										$css_coll = 'redcoll';
+									
+			               	   }
+							}
+							
+/* Конец Вывода остатка всех торговых предложений товара */	
 
 	               	?>
 			        <div class="carousel-2__available-text <?=$css_coll?>"><strong class="<?=$css_coll?>"><?=$text_one_coll?></strong><?=$text_two_coll?></div>
 			      </div>
-			      <? $UrlDetPicCart = CFile::GetPath($arItem['DETAIL_PICTURE']['ID']) ?>
+			      <? $UrlDetPicCart = CFile::GetPath($arItem['PREVIEW_PICTURE']['ID']);
+			      // echo '<pre>';
+			      // print_r($arItem);
+			      // echo '</pre>';
+			?>
 			      <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="carousel-2__img" tabindex="0"><img src="<?=$UrlDetPicCart?>"></a>
 			      <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="carousel-2__title"><?=$arItem['NAME']?></a>
 			      <div class="carousel-2__prices-n-colors">
